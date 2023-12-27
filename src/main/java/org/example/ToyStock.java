@@ -1,8 +1,4 @@
-package ru.nefedovam;
-
-import ru.nefedovam.entity.Toy;
-import ru.nefedovam.entity.ToyGenerator;
-import ru.nefedovam.entity.ToyType;
+package org.example;
 
 import java.util.ArrayList;
 import java.util.HashMap;

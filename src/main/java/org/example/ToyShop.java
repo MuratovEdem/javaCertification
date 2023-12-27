@@ -1,9 +1,4 @@
-package ru.nefedovam;
-
-import ru.nefedovam.entity.LotteryStatistic;
-import ru.nefedovam.entity.Toy;
-import ru.nefedovam.entity.ToyType;
-import ru.nefedovam.entity.WonStatistic;
+package org.example;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -21,9 +16,9 @@ public class ToyShop {
 
     private final HashMap<ToyType, Integer> priorityMap = new HashMap<>() {{
         put(ToyType.BALL, 10);
-        put(ToyType.DOLL, 15);
-        put(ToyType.CONSTRUCTOR, 1);
-        put(ToyType.BEAR, 6);
+        put(ToyType.SOLDIER, 15);
+        put(ToyType.CAR, 1);
+        put(ToyType.PEN, 6);
     }};
 
     public void startShop() {

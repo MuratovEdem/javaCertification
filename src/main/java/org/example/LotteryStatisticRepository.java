@@ -1,4 +1,4 @@
-package ru.nefedovam;
+package org.example;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -17,7 +17,7 @@ public class LotteryStatisticRepository {
     private static final Gson GSON = new Gson();
     private static final String FILE_NAME = "lotteryStatistic.json";
     private final File statisticFile;
-    private final Type listType = new TypeToken<ArrayList<ru.nefedovam.entity.LotteryStatistic>>() {
+    private final Type listType = new TypeToken<ArrayList<org.example.LotteryStatistic>>() {
     }.getType();
 
     public LotteryStatisticRepository() {
@@ -27,7 +27,7 @@ public class LotteryStatisticRepository {
         }
     }
 
-    public List<ru.nefedovam.entity.LotteryStatistic> getAllStatistic() {
+    public List<org.example.LotteryStatistic> getAllStatistic() {
         try {
             String json = new String(Files.readAllBytes(statisticFile.toPath()));
             return GSON.fromJson(json, listType);
@@ -36,7 +36,7 @@ public class LotteryStatisticRepository {
         }
     }
 
-    public void rewriteStatistic(List<ru.nefedovam.entity.LotteryStatistic> data) {
+    public void rewriteStatistic(List<org.example.LotteryStatistic> data) {
         try {
             String json = GSON.toJson(data);
             BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME));
@@ -47,8 +47,8 @@ public class LotteryStatisticRepository {
         }
     }
 
-    public void insertStatistic(ru.nefedovam.entity.LotteryStatistic lotteryStatistic) {
-        List<ru.nefedovam.entity.LotteryStatistic> allStatistic = getAllStatistic();
+    public void insertStatistic(org.example.LotteryStatistic lotteryStatistic) {
+        List<org.example.LotteryStatistic> allStatistic = getAllStatistic();
         allStatistic.add(lotteryStatistic);
         rewriteStatistic(allStatistic);
     }

@@ -1,4 +1,4 @@
-package ru.nefedovam.entity;
+package org.example;
 
 import java.util.ArrayList;
 import java.util.HashMap;

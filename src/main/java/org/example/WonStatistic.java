@@ -1,4 +1,4 @@
-package ru.nefedovam.entity;
+package org.example;
 
 public class WonStatistic {
     private final Toy wonToy;
